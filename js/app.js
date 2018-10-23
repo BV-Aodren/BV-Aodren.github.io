@@ -120,8 +120,8 @@ function exportToExcel() {
                 //var wopts = { bookType:'xlsx', bookSST:false, type:'array' };
                                                                 var wopts = { bookType:'txt', bookSST:false, type:'array' };
                 var wbout = XLSX.write(wb,wopts);
-                //saveAs(new Blob([wbout],{type:"application/octet-stream"}), "export.xlsx");
-                                                                saveAs(new Blob([wbout],{type:"application/octet-stream"}), "export.csv");
+                saveAs(new Blob([wbout],{type:"application/octet-stream"}), "export.xlsx");
+                //saveAs(new Blob([wbout],{type:"application/octet-stream"}), "export.csv");
               }
             });
           });
