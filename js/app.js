@@ -117,8 +117,8 @@ function exportToExcel() {
               sheetCount = sheetCount + 1;
               XLSX.utils.book_append_sheet(wb, ws, sheetname);
               if (sheetCount == totalSheets) {
-                //var wopts = { bookType:'xlsx', bookSST:false, type:'array' };
-                                                                var wopts = { bookType:'txt', bookSST:false, type:'array' };
+                var wopts = { bookType:'xlsx', bookSST:false, type:'array' };
+                //var wopts = { bookType:'txt', bookSST:false, type:'array' };
                 var wbout = XLSX.write(wb,wopts);
                 saveAs(new Blob([wbout],{type:"application/octet-stream"}), "export.xlsx");
                 //saveAs(new Blob([wbout],{type:"application/octet-stream"}), "export.csv");
