@@ -141,6 +141,7 @@ function decodeRows(columns, headers, dataset, callback, ret) {
   var meta = {};
   for (var j = 0; j < columns.length; j++) {
     if (headers.indexOf(columns[j].fieldName) > -1) {
+      console.log(thisRow[j]);
       meta[columns[j].fieldName] = thisRow[j].formattedValue.replace(/ /g," ")
     }
   }
